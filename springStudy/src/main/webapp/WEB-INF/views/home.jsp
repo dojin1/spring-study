@@ -7,9 +7,12 @@
 </head>
 <body>
 <h1>
-	Hello world!  1
+	Hello world!
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
+<p> my name is ${myName}. </p>
+<p> my country is ${myCountry}.</p>
+<p> my mobile number is ${myMobile}.</p>
 </body>
 </html>
