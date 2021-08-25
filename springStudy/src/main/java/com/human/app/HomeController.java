@@ -59,5 +59,19 @@ public class HomeController {
 		model.addAttribute("region",addr);
 		return "viewinfo";
 	}
-	
+	@RequestMapping("/choose")
+	public String doChoose() {
+		return "choose";
+	}
+	@RequestMapping("/selected")
+	public String doJob(HttpServletRequest hsr, Model model) {
+		String strPath=hsr.getParameter("path");
+		if(strPath.equals("login")) {
+			return "getinfo";
+		}else if(strPath.equals("newbie")) {
+			return "newbie";
+		}else {
+			return "choose";
+		}
+	}
 }
