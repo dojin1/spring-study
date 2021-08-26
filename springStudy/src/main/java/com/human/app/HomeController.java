@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * Handles requests for the application home page.
@@ -50,9 +51,14 @@ public class HomeController {
 	}
 	
 	@RequestMapping("/info")
-	public String doInfo(HttpServletRequest hsr, Model model) {
-		String uid=hsr.getParameter("userid");
-		String addr=hsr.getParameter("address");
+	
+	/*
+	 * public String doInfo(@RequestParam("userid") String
+	 * uid,@RequestParam("address") String addr, Model model) {
+	 */
+	 
+	public String doInfo(HttpServletRequest hsr, Model model) { String
+		uid=hsr.getParameter("userid"); String addr=hsr.getParameter("address");
 		System.out.println("uid="+uid);
 		System.out.println("addr="+addr);
 		model.addAttribute("loginid",uid);
